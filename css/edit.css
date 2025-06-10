@@ -1,0 +1,411 @@
+.destinations {
+  width: 100%;
+  background-color: rgb(249, 249, 249);
+}
+
+.container_data {
+  width: 1300px;
+  padding: 15px 30px;
+  margin: auto;
+}
+
+.destinations-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.destination-card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 2px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.destination-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-img {
+  height: 250px;
+  overflow: hidden;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.destination-card:hover .card-img img {
+  transform: scale(1.1);
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  margin-bottom: 15px;
+  color: #666;
+}
+
+
+.rating {
+  color: #ffc107;
+  margin: 10px 0;
+}
+
+.carousel {
+  color: black;
+}
+
+
+
+/* teromilian */
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Add responsive styles for destinations section */
+@media (max-width: 1400px) {
+  .container_data {
+    width: 100%;
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 991px) {
+  .destinations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .container_data {
+    padding: 15px 20px;
+  }
+
+  .card-content h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .destinations-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .card-img {
+    height: 200px;
+  }
+
+  .card-content {
+    padding: 15px;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* 
+packing cards         */
+
+.container_data_world {
+  padding: 20px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding-bottom: 60px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  container-type: inline-size;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-img {
+  height: 200px;
+  overflow: hidden;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card-img img {
+  transform: scale(1.1);
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  margin-bottom: 15px;
+  color: #666;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.rating {
+  color: #ffc107;
+}
+
+.btn {
+  background-color: #6059f6;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #4b45d1;
+}
+
+/* Responsive styles using container queries */
+@container (min-width: 400px) {
+  .card-content {
+    padding: 25px;
+  }
+
+  .card-content h3 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Fallback responsive styles using media queries */
+@media (max-width: 768px) {
+  .card-img {
+    height: 180px;
+  }
+
+  .card-content h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-img {
+    height: 160px;
+  }
+
+  .card-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+/* about our travlers */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fff;
+  color: #0a2e3a;
+}
+
+.testimonials {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.testimonial-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  scroll-snap-type: x mandatory;
+  padding: 20px;
+}
+
+.testimonial-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.testimonial-scroll::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.testimonial-card {
+  background-color: #e9f8ff;
+  padding: 20px;
+  border-radius: 15px;
+  min-width: 280px;
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-card img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.testimonial-name {
+  font-weight: bold;
+}
+
+.testimonial-role {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.testimonial-stars {
+  color: orange;
+  margin-left: auto;
+}
+
+.testimonial-text {
+  font-style: italic;
+  margin-top: 10px;
+  font-size: 0.95rem;
+}
+
+.quote-icon {
+  position: absolute;
+  bottom: -15px;
+  right: 15px;
+  background: #fff;
+  color: #00aaff;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  padding: 5px 10px;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  scroll-snap-type: x mandatory;
+  padding: 20px;
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+}
+
+.testimonial-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* package */
+
+.journey-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 40px;
+  gap: 40px;
+}
+
+.journey-images {
+  flex: 1 1 400px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.oval-image {
+  width: 180px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50% / 30%;
+}
+
+.bottom {
+  width: 100%;
+  height: 250px;
+  border-radius: 50% / 20%;
+  object-fit: cover;
+}
+
+.journey-text {
+  flex: 1 1 400px;
+}
+
+.journey-text h2 {
+  font-size: 2.5rem;
+  color: #0a2f3c;
+}
+
+.journey-text p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-top: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .journey-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .journey-images {
+    justify-content: center;
+  }
+
+  .journey-text h2 {
+    font-size: 2rem;
+  }
+}
