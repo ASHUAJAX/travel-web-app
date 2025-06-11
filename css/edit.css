@@ -1,10 +1,32 @@
+/* Base responsive container */
+.container_responsive {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Accessibility - reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Destinations section */
 .destinations {
   width: 100%;
   background-color: rgb(249, 249, 249);
+  padding: 40px 0;
 }
 
 .container_data {
-  width: 1300px;
+  width: 100%;
+  max-width: 1300px;
   padding: 15px 30px;
   margin: auto;
 }
@@ -30,7 +52,7 @@
 }
 
 .card-img {
-  height: 100px;
+  height: 200px;
   overflow: hidden;
 }
 
@@ -59,72 +81,18 @@
   color: #666;
 }
 
-
 .rating {
   color: #ffc107;
   margin: 10px 0;
 }
 
-.carousel {
-  color: black;
-}
-
-
-
-/* teromilian */
 .row {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* Add responsive styles for destinations section */
-@media (max-width: 1400px) {
-  .container_data {
-    width: 100%;
-    max-width: 1200px;
-  }
-}
-
-@media (max-width: 991px) {
-  .destinations-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 767px) {
-  .container_data {
-    padding: 15px 20px;
-  }
-
-  .card-content h3 {
-    font-size: 1.3rem;
-  }
-}
-
-@media (max-width: 575px) {
-  .destinations-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .card-img {
-    height: 200px;
-  }
-
-  .card-content {
-    padding: 15px;
-  }
-
-  .row {
-    flex-direction: column;
-    gap: 10px;
-  }
-}
-
-/* 
-packing cards         */
-
+/* Packing cards / World container */
 .container_data_world {
   padding: 20px;
   width: 100%;
@@ -148,45 +116,11 @@ packing cards         */
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
-.card-img {
-  height: 129px;
-  overflow: hidden;
-}
-
-.card-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.card:hover .card-img img {
-  transform: scale(1.1);
-}
-
-.card-content {
-  padding: 20px;
-}
-
-.card-content h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.card-content p {
-  margin-bottom: 15px;
-  color: #666;
-}
-
 .card-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 15px;
-}
-
-.rating {
-  color: #ffc107;
 }
 
 .btn {
@@ -203,49 +137,7 @@ packing cards         */
   background-color: #4b45d1;
 }
 
-/* Responsive styles using container queries */
-@container (min-width: 400px) {
-  .card-content {
-    padding: 25px;
-  }
-
-  .card-content h3 {
-    font-size: 1.8rem;
-  }
-}
-
-/* Fallback responsive styles using media queries */
-@media (max-width: 768px) {
-  .card-img {
-    height: 180px;
-  }
-
-  .card-content h3 {
-    font-size: 1.3rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .card-img {
-    height: 160px;
-  }
-
-  .card-footer {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-}
-
-/* about our travlers */
-
-body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #fff;
-  color: #0a2e3a;
-}
-
+/* Testimonials section */
 .testimonials {
   padding: 60px 20px;
   text-align: center;
@@ -262,15 +154,12 @@ body {
   gap: 20px;
   scroll-snap-type: x mandatory;
   padding: 20px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .testimonial-scroll::-webkit-scrollbar {
-  height: 8px;
-}
-
-.testimonial-scroll::-webkit-scrollbar-thumb {
-  background: #ccc;
-  border-radius: 4px;
+  display: none;
 }
 
 .testimonial-card {
@@ -286,18 +175,18 @@ body {
   flex-direction: column;
 }
 
-.testimonial-card img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
 .testimonial-header {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-bottom: 10px;
+}
+
+.testimonial-card img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .testimonial-name {
@@ -333,22 +222,7 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.testimonial-scroll {
-  display: flex;
-  overflow-x: auto;
-  gap: 20px;
-  scroll-snap-type: x mandatory;
-  padding: 20px;
-  scrollbar-width: none; 
-  -ms-overflow-style: none; 
-}
-
-.testimonial-scroll::-webkit-scrollbar {
-  display: none;
-}
-
-/* package */
-
+/* Journey section */
 .journey-section {
   display: flex;
   flex-wrap: wrap;
@@ -394,18 +268,187 @@ body {
   margin-top: 20px;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
+/* RESPONSIVE STYLES */
+
+/* Extra large devices (large desktops, 1400px and up) */
+@media (max-width: 1400px) {
+  .container_data {
+    width: 100%;
+    max-width: 1200px;
+  }
+}
+
+/* Large devices (desktops, 992px to 1199px) */
+@media (max-width: 1199px) {
+  .container_data {
+    max-width: 960px;
+  }
+  
+  .journey-text h2 {
+    font-size: 2.2rem;
+  }
+}
+
+/* Medium devices (tablets, 768px to 991px) */
+@media (max-width: 991px) {
+  .destinations-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+  
+  .container_data {
+    max-width: 720px;
+    padding: 15px 25px;
+  }
+  
+  .testimonials h2 {
+    font-size: 2.2rem;
+  }
+  
+  .journey-text h2 {
+    font-size: 2rem;
+  }
+  
+  .card-img {
+    height: 180px;
+  }
+}
+
+/* Small devices (landscape phones, 576px to 767px) */
+@media (max-width: 767px) {
+  .container_data {
+    max-width: 540px;
+    padding: 15px 20px;
+  }
+  
+  .card-content h3 {
+    font-size: 1.3rem;
+  }
+  
+  .testimonials h2 {
+    font-size: 1.8rem;
+  }
+  
+  .testimonial-card {
+    min-width: 260px;
+  }
+  
+  .journey-section {
+    padding: 30px 20px;
+    gap: 30px;
+  }
+  
+  .journey-text h2 {
+    font-size: 1.8rem;
+  }
+  
+  .journey-text p {
+    font-size: 1rem;
+  }
+  
+  .oval-image {
+    width: 150px;
+    height: 120px;
+  }
+  
+  .bottom {
+    height: 200px;
+  }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575px) {
+  .destinations-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .card-img {
+    height: 200px;
+  }
+  
+  .card-content {
+    padding: 15px;
+  }
+  
+  .row {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .testimonials {
+    padding: 40px 15px;
+  }
+  
+  .testimonials h2 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+  
+  .testimonial-scroll {
+    padding: 15px 5px;
+  }
+  
   .journey-section {
     flex-direction: column;
     text-align: center;
+    padding: 30px 15px;
   }
-
+  
   .journey-images {
     justify-content: center;
   }
+  
+  .oval-image {
+    width: 130px;
+    height: 100px;
+  }
+  
+  .bottom {
+    height: 180px;
+  }
+  
+  .card-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
 
-  .journey-text h2 {
-    font-size: 2rem;
+/* Container queries for component-level responsiveness */
+@container (min-width: 400px) {
+  .card-content {
+    padding: 25px;
+  }
+
+  .card-content h3 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Fix for very small devices (less than 400px) */
+@media (max-width: 400px) {
+  .card-img {
+    height: 160px;
+  }
+  
+  .testimonial-card {
+    min-width: 240px;
+    padding: 15px;
+  }
+  
+  .testimonial-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .testimonial-stars {
+    margin-left: 0;
+    margin-top: 5px;
+  }
+  
+  .btn {
+    padding: 6px 12px;
+    font-size: 0.9rem;
   }
 }

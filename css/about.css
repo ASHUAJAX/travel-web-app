@@ -1,0 +1,154 @@
+.img_about {
+    background-image: url('/img/about1.jpg');
+    width: 100%;
+    height: 70vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container_about_constain {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.hero_about_content {
+    width: fit-content;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero_about_content h1 {
+    color: white;
+    text-decoration: underline;
+
+}
+
+.hero_about_content p {
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 19px;
+    padding: 0px 10px;
+
+}
+
+.privacy_policy {
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 70px;
+    padding: 20px 0px;
+    align-items: center;
+    margin: auto;
+}
+
+.image_about_policy {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    height: 40vh;
+}
+
+.image_about_policy img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.about_policy_content strong {
+    font-size: 30px;
+}
+
+.privacy_policy_2 {
+    max-width: 900px;
+    margin: auto;
+}
+
+.about_policy_content_heading {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.about_policy_content_data {
+    font-size: 13px;
+}
+
+
+
+
+.service_mein_con {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 60px 0px;
+}
+
+.headingService {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #003366;
+    text-align: center;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+
+}
+
+.service-box {
+    background-color: #eaf6fb;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.service-box:hover {
+    transform: translateY(-5px);
+}
+
+.service-box img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.service-content {
+    padding: 1rem;
+}
+
+.service-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    align-items: center;
+}
+
+.button {
+    padding: 0.5rem 1rem;
+    border: 2px solid #003366;
+    background-color: transparent;
+    color: #003366;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background-color: #003366;
+    color: white;
+    transition: transform 0.5s ease;
+}
+
+@media (max-width: 768px) {
+    .service-box img {
+        height: 140px;
+    }
+}
