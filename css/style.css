@@ -157,7 +157,7 @@ h3,
   width: 100%;
   z-index: 99;
   background-color: white;
-  box-shadow: 2px 1px 3px;
+  box-shadow: 2px 1px 3px #00000016;
 }
 
 .header_area .navbar-right {
@@ -2941,7 +2941,9 @@ button.button {
     margin-top: 70px;
   }
 }
-
+.footer-text{
+  color: #888888;
+}
 .footer-text a,
 .footer-text i {
   color: #6059f6;

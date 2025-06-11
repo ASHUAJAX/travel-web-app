@@ -124,7 +124,7 @@ let userData = places.map((data, index) => {
       <p style='height: 20px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;'>${data.description}</p>
       <div class="card-footer">
         <span class="rating">★★★★☆</span>
-        <button class="btn">Learn More</button>
+        <a  href="contact.html"><button class="btn">Learn More</button></a>
       </div>
     </div>
   </div>
