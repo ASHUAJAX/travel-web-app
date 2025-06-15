@@ -2,42 +2,42 @@ const Service = [
     {
         "title": "Domestic Tours",
         "link": "contact.html",
-        image: 'https://img3.exportersindia.com/product_images/bc-full/dir_66/1962217/domestic-tour-package-services-1500013028-3139807.jpeg'
+        image:'img/service/DomesticTours.jpg'
     },
     {
         "title": "International Tour",
         "link": "contact.html",
-        image: "https://5.imimg.com/data5/SELLER/Default/2022/2/WH/OJ/VM/15342286/international-tour-package.png"
+        image:'img/service/InternationalTour.jpg'
     },
     {
         "title": "MICE",
         "link": "contact.html",
-        image: "https://images.wanderon.in/mice-images-collection/mice-tour"
+        image:'img/service/mice.jpg'
     },
     {
         "title": "Hotels",
         "link": "contact.html",
-        image: "https://media.istockphoto.com/id/119926339/photo/resort-swimming-pool.jpg?s=612x612&w=0&k=20&c=9QtwJC2boq3GFHaeDsKytF4-CavYKQuy1jBD2IRfYKc="
+        image:'img/service/Hotels.jpg'
     },
     {
         "title": "Insurance",
         "link": "contact.html",
-        image: "https://www.godigit.com/content/dam/godigit/directportal/en/motor-vehicles-insurance-image.jpg"
+        image:'img/service/Insurance.jpg'
     },
     {
         "title": "Flight",
         "link": "contact.html",
-        image: "https://www.usatoday.com/gcdn/presto/2019/06/23/USAT/c3a9f051-bd6c-4b39-b5b9-38244deec783-GettyImages-932651818.jpg?width=660&height=517&fit=crop&format=pjpg&auto=webp"
+        image:'img/service/Flight.jpg'
     },
     {
         "title": "Visa",
         "link": "contact.html",
-        image: "https://www.zealandimmigration.co.nz/images/products/tourist-visa.jpg"
+        image:'img/service/Visa.jpg'
     },
     {
         "title": "Transportation",
         "link": "contact.html",
-        image: "https://static8.depositphotos.com/1364641/896/i/450/depositphotos_8960122-stock-photo-types-of-transport.jpg"
+        image:'img/service/Transportation.jpg'
     }
 ]
 
