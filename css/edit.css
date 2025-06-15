@@ -7,16 +7,6 @@
   margin-left: auto;
 }
 
-/* Accessibility - reduced motion preference */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
 /* Destinations section */
 .destinations {
   width: 100%;
@@ -38,17 +28,30 @@
   gap: 30px;
 }
 
+.destination-card, .card {
+  /* Add hardware acceleration */
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
 .destination-card {
   background-color: white;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 5px 2px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
 .destination-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-10px) translateZ(0);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.destination-card:hover .card-img img {
+  transform: scale(1.1);
 }
 
 .card-img {
@@ -63,12 +66,9 @@
   transition: transform 0.3s ease;
 }
 
-.destination-card:hover .card-img img {
-  transform: scale(1.1);
-}
-
 .card-content {
   padding: 20px;
+  background: white;
 }
 
 .card-content h3 {
@@ -80,16 +80,13 @@
   margin-bottom: 15px;
   color: #666;
 }
-
-.rating {
-  color: #ffc107;
-  margin: 10px 0;
-}
-
-.row {
+.card-footer{
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.rating {
+  color: #ffc107;
 }
 
 /* Packing cards / World container */
@@ -112,7 +109,7 @@
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px) translateZ(0);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
@@ -130,11 +127,31 @@
   padding: 8px 15px;
   border-radius: 30px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  font-weight: 500;
 }
 
 .btn:hover {
-  color: white;
+  background-color: #4a45d1;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(96, 89, 246, 0.3);
+}
+
+@media (max-width: 768px) {
+  .container_data_world {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+  }
+  
+  .card-footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .btn {
+    width: 100%;
+    padding: 10px;
+  }
 }
 
 /* Testimonials section */

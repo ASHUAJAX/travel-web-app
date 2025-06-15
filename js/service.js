@@ -46,8 +46,10 @@ let services = document.querySelector('.services-container')
 let serviceData = Service.map((data, index) => {
     console.log(data)
     return `
-    <div class="service-box">
-      <img src="${data.image}" alt="Domestic Tours">
+    <div class="destination-card">
+    <div class="card-img">
+        <img src="${data.image}" alt="Domestic Tours">
+      </div>
       <div class="service-content">
         <h3>${data.title}</h3>
         <a href="${data.link}" class='button'>Book Now</a>

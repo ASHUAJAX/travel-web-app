@@ -117,8 +117,7 @@ const places = [
 let container_data_world = document.querySelector('.container_data_world');
 let userData = places.map((data, index) => {
   return `
-          <div class="card-container">
-  <div class="card">
+          <div class="destination-card">
     <div class="card-img">
       <img src="${data.image}" alt="Card image">
     </div>
@@ -130,7 +129,7 @@ let userData = places.map((data, index) => {
         <a  href="contact.html"><button class="btn">Learn More</button></a>
       </div>
     </div>
-  </div>
+
 </div>
     `
 
