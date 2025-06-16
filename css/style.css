@@ -2652,7 +2652,7 @@ button.button {
 	============================================================================================ */
 .footer-area {
   background-color: #04091e;
-  padding: 40px 20px;
+  padding: 60px 20px;
 }
 
 .container_footer {
@@ -2673,10 +2673,13 @@ button.button {
 .row_data_1 {
   max-width: 450px;
 }
+.row_data_1 p{
+  font-size: 17px;
+}
 
 .row_data_1 h6, .row_data_2 h6 {
   color: #6059f6;
-  font-size: 20px;
+  font-size: 23px;
   text-decoration: underline;
 }
 
@@ -2687,6 +2690,7 @@ button.button {
 
 .col_footer ul li a {
   color: #fff;
+  font-size: 17px;
 }
 
 .footer-bottom {
@@ -2702,10 +2706,14 @@ button.button {
 .social_links {
   display: flex;
   gap: 10px;
-}
 
+}
+.footer_text{
+  font-size: 16px;
+}
 .social_links a {
   color: #fff;
+  font-size: 22px;
 }
 
 /* Responsive styles */
