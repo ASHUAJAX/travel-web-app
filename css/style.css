@@ -51,7 +51,7 @@ h4,
 h5,
 h6 {
   font-family: "Roboto Condensed", sans-serif;
-  color: #2a2a2a;
+  color: white;
   line-height: 1.25;
 }
 
@@ -2625,13 +2625,14 @@ h3,
   }
 }
 
-.button:hover {
-  background-color: #201aa3;
-  color: #fff;
-}
+
 
 .button-hero {
   font-weight: 500;
+}
+.button:hover {
+  background-color: #201aa3!important;
+  color: #fff;
 }
 
 .button-contactForm {

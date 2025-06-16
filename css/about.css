@@ -6,6 +6,7 @@
     background-size: cover;
     background-position: center;
     color: white;
+    
 }
 
 .container_about_constain {
@@ -132,7 +133,7 @@
 .button:hover {
     background-color: #6059f6;
     transform: scale(1.10); 
-    color: black;
+    color: white;
 }
 
 @media (max-width: 768px) {
