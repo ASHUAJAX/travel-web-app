@@ -6,7 +6,9 @@
   margin-right: auto;
   margin-left: auto;
 }
+
 .button
+
 /* Destinations section */
 .destinations {
   width: 100%;
@@ -28,8 +30,8 @@
   gap: 30px;
 }
 
-.destination-card, .card {
-  /* Add hardware acceleration */
+.destination-card,
+.card {
   will-change: transform;
   transform: translateZ(0);
   backface-visibility: hidden;
@@ -40,7 +42,7 @@
   background-color: white;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 5px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
@@ -80,11 +82,13 @@
   margin-bottom: 15px;
   color: #666;
 }
-.card-footer{
+
+.card-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .rating {
   color: #ffc107;
 }
@@ -142,12 +146,12 @@
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 15px;
   }
-  
+
   .card-footer {
     flex-direction: column;
     gap: 10px;
   }
-  
+
   .btn {
     width: 100%;
     padding: 10px;
@@ -300,7 +304,7 @@
   .container_data {
     max-width: 960px;
   }
-  
+
   .journey-text h2 {
     font-size: 2.2rem;
   }
@@ -312,20 +316,20 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
   }
-  
+
   .container_data {
     max-width: 720px;
     padding: 15px 25px;
   }
-  
+
   .testimonials h2 {
     font-size: 2.2rem;
   }
-  
+
   .journey-text h2 {
     font-size: 2rem;
   }
-  
+
   .card-img {
     height: 180px;
   }
@@ -337,37 +341,37 @@
     max-width: 540px;
     padding: 15px 20px;
   }
-  
+
   .card-content h3 {
     font-size: 1.3rem;
   }
-  
+
   .testimonials h2 {
     font-size: 1.8rem;
   }
-  
+
   .testimonial-card {
     min-width: 260px;
   }
-  
+
   .journey-section {
     padding: 30px 20px;
     gap: 30px;
   }
-  
+
   .journey-text h2 {
     font-size: 1.8rem;
   }
-  
+
   .journey-text p {
     font-size: 1rem;
   }
-  
+
   .oval-image {
     width: 150px;
     height: 120px;
   }
-  
+
   .bottom {
     height: 200px;
   }
@@ -379,52 +383,52 @@
     grid-template-columns: 1fr;
     gap: 20px;
   }
-  
+
   .card-img {
     height: 200px;
   }
-  
+
   .card-content {
     padding: 15px;
   }
-  
+
   .row {
     flex-direction: column;
     gap: 10px;
   }
-  
+
   .testimonials {
     padding: 40px 15px;
   }
-  
+
   .testimonials h2 {
     font-size: 1.6rem;
     margin-bottom: 20px;
   }
-  
+
   .testimonial-scroll {
     padding: 15px 5px;
   }
-  
+
   .journey-section {
     flex-direction: column;
     text-align: center;
     padding: 30px 15px;
   }
-  
+
   .journey-images {
     justify-content: center;
   }
-  
+
   .oval-image {
     width: 130px;
     height: 100px;
   }
-  
+
   .bottom {
     height: 180px;
   }
-  
+
   .card-footer {
     flex-direction: column;
     align-items: flex-start;
@@ -448,22 +452,22 @@
   .card-img {
     height: 160px;
   }
-  
+
   .testimonial-card {
     min-width: 240px;
     padding: 15px;
   }
-  
+
   .testimonial-header {
     flex-direction: column;
     align-items: flex-start;
   }
-  
+
   .testimonial-stars {
     margin-left: 0;
     margin-top: 5px;
   }
-  
+
   .btn {
     padding: 6px 12px;
     font-size: 0.9rem;
