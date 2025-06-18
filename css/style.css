@@ -2790,3 +2790,189 @@ button.button {
     justify-content: center;
   }
 }
+
+
+
+/* Responsive styles for all devices */
+
+/* Mobile devices (default) */
+@media (max-width: 767px) {
+  /* Header adjustments */
+  .header_area .navbar-brand img {
+    width: 150px;
+  }
+  
+  .header_area .navbar .nav .nav-item .nav-link {
+    padding: 10px 0;
+  }
+  
+  /* Hero banner */
+  .hero-banner {
+    padding-top: 80px;
+  }
+  
+  .hero-banner h1 {
+    font-size: 28px;
+  }
+  
+  /* Section margins */
+  .section-margin, 
+  .section-margin-large {
+    margin: 40px 0;
+  }
+  
+  .section-padding {
+    padding: 40px 0;
+  }
+  
+  /* Footer adjustments */
+  .row_container {
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px 15px;
+  }
+  
+  .row_data_1, 
+  .row_data_2 {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+  
+  .social_links {
+    justify-content: center;
+  }
+  
+  .footer_text {
+    font-size: 14px;
+  }
+  
+  /* Testimonials */
+  .testimonial__item {
+    padding: 20px 15px;
+  }
+  
+  /* Cards */
+  .card-img {
+    height: 150px;
+  }
+  
+  .card-content {
+    padding: 15px;
+  }
+}
+
+/* Tablets (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Header */
+  .header_area .navbar .nav .nav-item {
+    margin-right: 15px;
+  }
+  
+  /* Hero banner */
+  .hero-banner h1 {
+    font-size: 36px;
+  }
+  
+  /* Footer */
+  .row_container {
+    gap: 40px;
+    padding: 30px 20px;
+  }
+  
+  .row_data_1 {
+    max-width: 45%;
+  }
+  
+  /* Cards grid */
+  .destinations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Small desktops (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Header */
+  .header_area .navbar .nav .nav-item {
+    margin-right: 25px;
+  }
+  
+  /* Footer */
+  .row_container {
+    max-width: 960px;
+  }
+}
+
+/* Large desktops (1200px and up) */
+@media (min-width: 1200px) {
+  /* Default styles already account for large screens */
+}
+
+/* Specific adjustments for very small screens */
+@media (max-width: 480px) {
+  /* Header */
+  .header_area .navbar-collapse {
+    max-height: 250px;
+    overflow-y: auto;
+  }
+  
+  /* Hero banner */
+  .hero-banner h1 {
+    font-size: 24px;
+  }
+  
+  /* Cards */
+  .card-content h3 {
+    font-size: 18px;
+  }
+  
+  /* Footer */
+  .row_data_1 h6,
+  .row_data_2 h6 {
+    font-size: 20px;
+  }
+  
+  .col_footer ul li a {
+    font-size: 18px;
+  }
+  
+  .social_links a {
+    font-size: 18px;
+  }
+}
+
+/* Landscape phones */
+@media (max-width: 767px) and (orientation: landscape) {
+  .header_area .navbar-collapse {
+    max-height: 200px;
+  }
+}
+
+/* High resolution displays */
+@media (-webkit-min-device-pixel-ratio: 2), 
+       (min-resolution: 192dpi) {
+  /* Adjustments for retina displays if needed */
+}
+
+/* Print styles */
+@media print {
+  .header_area,
+  .footer-area {
+    display: none;
+  }
+  
+  body {
+    font-size: 12pt;
+    color: #000;
+  }
+}
+
+/* Animation adjustments for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

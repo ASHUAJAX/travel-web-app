@@ -7,27 +7,30 @@
   margin-left: auto;
 }
 
-.button
+/* Button styles */
+.button {
+  /* Add your button styles here */
+}
 
 /* Destinations section */
 .destinations {
   width: 100%;
   background-color: rgb(249, 249, 249);
-  padding: 40px 0;
+  padding: clamp(2rem, 5vw, 4rem) 0; /* Responsive padding */
 }
 
 .container_data {
   width: 100%;
-  max-width: 1300px;
-  padding: 15px 30px;
-  margin: auto;
+  max-width: min(1300px, 95%); /* Better max-width handling */
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 3vw, 1.5rem); /* Responsive padding */
 }
 
 .destinations-grid {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  grid-template-columns: 1fr; /* Mobile-first: single column */
+  gap: clamp(1rem, 3vw, 2rem); /* Responsive gap */
 }
 
 .destination-card,
@@ -57,7 +60,7 @@
 }
 
 .card-img {
-  height: 129px;
+  height: clamp(10rem, 30vw, 12rem); /* Responsive height */
   overflow: hidden;
 }
 
@@ -69,24 +72,26 @@
 }
 
 .card-content {
-  padding: 20px;
+  padding: clamp(1rem, 3vw, 1.25rem); /* Responsive padding */
   background: white;
 }
 
 .card-content h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+  font-size: clamp(1.2rem, 3vw, 1.5rem); /* Responsive font */
+  margin-bottom: 0.75rem;
 }
 
 .card-content p {
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
   color: #666;
+  font-size: clamp(0.9rem, 2vw, 1rem); /* Responsive font */
 }
 
 .card-footer {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column; /* Mobile-first: column layout */
+  gap: 0.75rem;
+  align-items: flex-start;
 }
 
 .rating {
@@ -95,12 +100,11 @@
 
 /* Packing cards / World container */
 .container_data_world {
-  padding: 20px;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  padding-bottom: 60px;
+  grid-template-columns: 1fr; /* Mobile-first: single column */
+  gap: clamp(1rem, 3vw, 1.5rem); /* Responsive gap */
+  padding: 0 clamp(1rem, 3vw, 1.5rem) clamp(3rem, 6vw, 4rem); /* Responsive padding */
 }
 
 .card {
@@ -117,22 +121,17 @@
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
-.card-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 15px;
-}
-
 .btn {
   background-color: #6059f6;
   color: white;
   border: none;
-  padding: 8px 15px;
+  padding: 0.5rem 1rem;
   border-radius: 30px;
   cursor: pointer;
   transition: all 0.3s ease;
   font-weight: 500;
+  font-size: clamp(0.9rem, 2vw, 1rem); /* Responsive font */
+  width: 100%; /* Full width on mobile */
 }
 
 .btn:hover {
@@ -141,40 +140,23 @@
   box-shadow: 0 4px 8px rgba(96, 89, 246, 0.3);
 }
 
-@media (max-width: 768px) {
-  .container_data_world {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-  }
-
-  .card-footer {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .btn {
-    width: 100%;
-    padding: 10px;
-  }
-}
-
 /* Testimonials section */
 .testimonials {
-  padding: 60px 20px;
+  padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 3vw, 1.5rem); /* Responsive padding */
   text-align: center;
 }
 
 .testimonials h2 {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
+  font-size: clamp(1.5rem, 4vw, 2.5rem); /* Responsive font */
+  margin-bottom: clamp(1.5rem, 4vw, 2rem); /* Responsive margin */
 }
 
 .testimonial-scroll {
   display: flex;
   overflow-x: auto;
-  gap: 20px;
+  gap: clamp(1rem, 3vw, 1.5rem); /* Responsive gap */
   scroll-snap-type: x mandatory;
-  padding: 20px;
+  padding: 1rem 0;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -185,9 +167,9 @@
 
 .testimonial-card {
   background-color: #e9f8ff;
-  padding: 20px;
+  padding: clamp(1rem, 3vw, 1.25rem); /* Responsive padding */
   border-radius: 15px;
-  min-width: 280px;
+  min-width: min(280px, 85vw); /* Better min-width */
   flex: 0 0 auto;
   scroll-snap-align: center;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -198,36 +180,37 @@
 
 .testimonial-header {
   display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 10px;
+  flex-direction: column; /* Mobile-first: column layout */
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
 .testimonial-card img {
-  width: 50px;
-  height: 50px;
+  width: clamp(3rem, 10vw, 3.5rem); /* Responsive size */
+  height: clamp(3rem, 10vw, 3.5rem); /* Responsive size */
   border-radius: 50%;
   object-fit: cover;
 }
 
 .testimonial-name {
   font-weight: bold;
+  font-size: clamp(1rem, 3vw, 1.1rem); /* Responsive font */
 }
 
 .testimonial-role {
-  font-size: 0.9rem;
+  font-size: clamp(0.8rem, 2vw, 0.9rem); /* Responsive font */
   color: #777;
 }
 
 .testimonial-stars {
   color: orange;
-  margin-left: auto;
 }
 
 .testimonial-text {
   font-style: italic;
-  margin-top: 10px;
-  font-size: 0.95rem;
+  margin-top: 0.75rem;
+  font-size: clamp(0.85rem, 2vw, 0.95rem); /* Responsive font */
 }
 
 .quote-icon {
@@ -246,230 +229,116 @@
 /* Journey section */
 .journey-section {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column; /* Mobile-first: column layout */
   align-items: center;
-  padding: 40px;
-  gap: 40px;
+  padding: clamp(1.5rem, 4vw, 2.5rem); /* Responsive padding */
+  gap: clamp(1.5rem, 4vw, 2.5rem); /* Responsive gap */
 }
 
 .journey-images {
-  flex: 1 1 400px;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: clamp(1rem, 3vw, 1.5rem); /* Responsive gap */
 }
 
 .oval-image {
-  width: 180px;
-  height: 140px;
+  width: clamp(8rem, 25vw, 11rem); /* Responsive width */
+  height: clamp(6rem, 20vw, 8rem); /* Responsive height */
   object-fit: cover;
   border-radius: 50% / 30%;
 }
 
 .bottom {
   width: 100%;
-  height: 250px;
+  height: clamp(10rem, 30vw, 15rem); /* Responsive height */
   border-radius: 50% / 20%;
   object-fit: cover;
 }
 
 .journey-text {
-  flex: 1 1 400px;
+  width: 100%;
+  max-width: 600px;
 }
 
 .journey-text h2 {
-  font-size: 2.5rem;
+  font-size: clamp(1.5rem, 4vw, 2.5rem); /* Responsive font */
   color: #0a2f3c;
+  text-align: center; /* Center on mobile */
 }
 
 .journey-text p {
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 2.5vw, 1.1rem); /* Responsive font */
   color: #555;
-  margin-top: 20px;
+  margin-top: clamp(1rem, 3vw, 1.5rem); /* Responsive margin */
+  text-align: center; /* Center on mobile */
 }
 
-/* RESPONSIVE STYLES */
+/* MEDIA QUERIES FOR LARGER SCREENS */
 
-/* Extra large devices (large desktops, 1400px and up) */
-@media (max-width: 1400px) {
-  .container_data {
-    width: 100%;
-    max-width: 1200px;
-  }
-}
-
-/* Large devices (desktops, 992px to 1199px) */
-@media (max-width: 1199px) {
-  .container_data {
-    max-width: 960px;
-  }
-
-  .journey-text h2 {
-    font-size: 2.2rem;
-  }
-}
-
-/* Medium devices (tablets, 768px to 991px) */
-@media (max-width: 991px) {
-  .destinations-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-  }
-
-  .container_data {
-    max-width: 720px;
-    padding: 15px 25px;
-  }
-
-  .testimonials h2 {
-    font-size: 2.2rem;
-  }
-
-  .journey-text h2 {
-    font-size: 2rem;
-  }
-
-  .card-img {
-    height: 180px;
-  }
-}
-
-/* Small devices (landscape phones, 576px to 767px) */
-@media (max-width: 767px) {
-  .container_data {
-    max-width: 540px;
-    padding: 15px 20px;
-  }
-
-  .card-content h3 {
-    font-size: 1.3rem;
-  }
-
-  .testimonials h2 {
-    font-size: 1.8rem;
-  }
-
-  .testimonial-card {
-    min-width: 260px;
-  }
-
-  .journey-section {
-    padding: 30px 20px;
-    gap: 30px;
-  }
-
-  .journey-text h2 {
-    font-size: 1.8rem;
-  }
-
-  .journey-text p {
-    font-size: 1rem;
-  }
-
-  .oval-image {
-    width: 150px;
-    height: 120px;
-  }
-
-  .bottom {
-    height: 200px;
-  }
-}
-
-/* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575px) {
-  .destinations-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .card-img {
-    height: 200px;
-  }
-
-  .card-content {
-    padding: 15px;
-  }
-
-  .row {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .testimonials {
-    padding: 40px 15px;
-  }
-
-  .testimonials h2 {
-    font-size: 1.6rem;
-    margin-bottom: 20px;
-  }
-
-  .testimonial-scroll {
-    padding: 15px 5px;
-  }
-
-  .journey-section {
-    flex-direction: column;
-    text-align: center;
-    padding: 30px 15px;
-  }
-
-  .journey-images {
-    justify-content: center;
-  }
-
-  .oval-image {
-    width: 130px;
-    height: 100px;
-  }
-
-  .bottom {
-    height: 180px;
-  }
-
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
   .card-footer {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
+    flex-direction: row; /* Switch to row layout */
+    justify-content: space-between;
+    align-items: center;
   }
+
+  .btn {
+    width: auto; /* Auto width on larger screens */
+  }
+
+  .testimonial-header {
+    flex-direction: row; /* Switch to row layout */
+    align-items: center;
+  }
+
+  .testimonial-stars {
+    margin-left: auto;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .destinations-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+  }
+
+  .container_data_world {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  }
+
+  .journey-section {
+    flex-direction: row; /* Switch to row layout */
+    text-align: left; /* Align text left */
+  }
+
+  .journey-text h2,
+  .journey-text p {
+    text-align: left; /* Align text left */
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .destinations-grid {
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  /* Additional adjustments for very large screens if needed */
 }
 
 /* Container queries for component-level responsiveness */
 @container (min-width: 400px) {
   .card-content {
-    padding: 25px;
+    padding: 1.5rem;
   }
 
   .card-content h3 {
-    font-size: 1.8rem;
-  }
-}
-
-/* Fix for very small devices (less than 400px) */
-@media (max-width: 400px) {
-  .card-img {
-    height: 160px;
-  }
-
-  .testimonial-card {
-    min-width: 240px;
-    padding: 15px;
-  }
-
-  .testimonial-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .testimonial-stars {
-    margin-left: 0;
-    margin-top: 5px;
-  }
-
-  .btn {
-    padding: 6px 12px;
-    font-size: 0.9rem;
+    font-size: 1.5rem;
   }
 }

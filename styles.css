@@ -1,0 +1,115 @@
+/* Base styles (applied to all devices) */
+:root {
+  --container-padding: 15px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+}
+
+.container {
+  width: 100%;
+  padding: 0 var(--container-padding);
+  margin: 0 auto;
+}
+
+/* Grid system */
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+}
+
+/* Typography responsive scaling */
+h1 { font-size: clamp(1.75rem, 5vw, 3rem); }
+h2 { font-size: clamp(1.5rem, 4vw, 2.5rem); }
+h3 { font-size: clamp(1.25rem, 3vw, 2rem); }
+p { font-size: clamp(1rem, 2vw, 1.2rem); }
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Mobile (small screens) - default styles above apply */
+
+/* Tablet (medium screens) */
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+  
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Laptop/Desktop (large screens) */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 960px;
+  }
+  
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1320px;
+  }
+  
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* TV and extra large screens */
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1800px;
+  }
+  
+  :root {
+    --container-padding: 30px;
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    font-size: 12pt;
+  }
+  
+  .no-print {
+    display: none;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #f0f0f0;
+  }
+}
+
+/* Accessibility - reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
